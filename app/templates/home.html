@@ -1,1 +1,8 @@
-<h1>Home Page</h1>
+<section ng-controller="HomeCtrl as home">
+    <div>
+        <h1>Bloc Chat</h1>
+
+        <!-- Displaying rooms in template using ng-repeat -->
+        <h2 ng-repeat = "room in home.rooms track by $index"> Room {{ ($index + 1) }} </h2>
+    </div>
+</section>
