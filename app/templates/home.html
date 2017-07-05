@@ -1,8 +1,16 @@
 <section ng-controller="HomeCtrl as home">
     <div>
+      <header>
         <h1>Bloc Chat</h1>
+      </header>
+      <div id="rooms">
+        <!-- Add new rooms -->
+        <span class ="new-room-button" type = "button" ng-click = "home.addRoom()"> New Room </span>
 
         <!-- Displaying rooms in template using ng-repeat -->
         <h2 ng-repeat = "room in home.rooms track by $index"> Room {{ ($index + 1) }} </h2>
+      </div>
+      <div id = "messages"> Messages
+      </div>
     </div>
 </section>
