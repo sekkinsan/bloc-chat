@@ -1,5 +1,6 @@
 (function() {
     function ModalCtrl(Room, $uibModalInstance) {
+
         this.cancel = function() {
             $uibModalInstance.dismiss();
         };
@@ -8,6 +9,7 @@
             Room.add(this.newRoom);
             $uibModalInstance.close();
         };
+
     }
 
     angular
