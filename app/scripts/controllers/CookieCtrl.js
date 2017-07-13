@@ -7,14 +7,13 @@
             //Modal config object properties
               templateUrl: '/templates/username.html',
               size: 'sm',
-              controller: 'ModalCtrl as modal'
-              keyboard: false,
-              backdrop: 'static'
-          });
+              controller: 'UserCtrl',
+              controllerAs: 'userctrl'
+          })
       }
 }
 
   angular
-      .module('blocChat')
+      .module('blocChat', ['ngCookies', 'ui.bootstrap'])
       .run(['$cookies', '$uibModal', BlocChatCookies]);
 })();
