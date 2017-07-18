@@ -1,13 +1,15 @@
 (function() {
     function UserCtrl($cookies, $uibModalInstance) {
       var userCtrl = this;
+
       this.createUsername = function() {
           if(this.username) {
-          $cookies.put('blocChatCurrentUser', this.username);
-          $uibModalInstance.dismiss('cancel');
+          $cookies.put('blocChatCurrentUser', userCtrl.username);
+          $uibModalInstance.close();
       } else {
           alert("You must create a username to send messages!");
       }
+
     };
   };
 

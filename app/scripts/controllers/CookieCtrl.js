@@ -11,9 +11,10 @@
               controllerAs: 'userctrl'
           })
       }
+      console.log(currentUser);
 }
 
   angular
-      .module('blocChat', ['ngCookies', 'ui.bootstrap'])
+      .module('blocChat')
       .run(['$cookies', '$uibModal', BlocChatCookies]);
 })();
