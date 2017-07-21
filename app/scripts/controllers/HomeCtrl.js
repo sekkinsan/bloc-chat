@@ -16,6 +16,14 @@
         this.setCurrentRoom = function (room) {
             this.currentRoom = room;
             this.messages = Message.getByRoomId(this.currentRoom.$id);
+            this.currentRoomId = room.$id
+        }
+
+        this.sendMessage = function() {
+            var currentTime = "12:00pm";
+            console.log(this.message);
+            Message.send(this.message, this.currentRoomId, currentTime, this.currentUser);
+            this.message = "";
         }
     }
 

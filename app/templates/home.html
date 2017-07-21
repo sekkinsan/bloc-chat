@@ -18,5 +18,9 @@
           <div class="user-message"> {{message.content}} </div>
           <div class="timestamp"> [{{message.sentAt}}] </div>
         </div>
+      <form class = "message-field" ng-submit="home.sendMessage()">
+        <input type="text" class="message-input" placeholder="Message..." ng-model="home.message">
+        <input type="submit" class="button-sendmessage" value="Send">
+      </form>
   </div>
 </section>
