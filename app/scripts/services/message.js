@@ -20,9 +20,9 @@
         }
 
   */
-        Message.send = function(newMessage, roomId) {
+        Message.send = function(newMessage, roomId, username) {
           console.log("test" + roomId );
-          messages.$add({ content: newMessage, roomId: roomId})
+          messages.$add({ content: newMessage, roomId: roomId, username: username})
         }
 
 

@@ -21,8 +21,8 @@
 
         this.sendMessage = function() {
             var currentTime = "12:00pm";
-            console.log(this.message);
-            Message.send(this.message, this.currentRoomId, currentTime, this.currentUser);
+            console.log();
+            Message.send(this.message, this.currentRoomId, this.currentUser);
             this.message = "";
         }
     }
