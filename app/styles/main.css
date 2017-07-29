@@ -68,10 +68,12 @@
 
 .messages .timestamp {
   font-style: italic;
+  padding-left: 1px;
 }
 
 .messages .user-message {
   display: inline-block;
+  padding-left: 2px;
 }
 
 .new-message {
@@ -84,4 +86,5 @@
 
 .message-input {
   width: 83%;
+  height: auto;
 }
