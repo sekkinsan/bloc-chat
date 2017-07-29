@@ -4,6 +4,7 @@
         this.rooms = Room.all;
         this.currentRoom = null;
         this.currentUser = $cookies.get('blocChatCurrentUser');
+        this.currentTime = new Date(new Date().getTime()).toLocaleTimeString();
 
         this.addRoom = function() {
               $uibModal.open({
@@ -20,9 +21,7 @@
         }
 
         this.sendMessage = function() {
-            var currentTime = "12:00pm";
-            console.log();
-            Message.send(this.message, this.currentRoomId, this.currentUser);
+            Message.send(this.message, this.currentRoomId, this.currentUser, this.currentTime);
             this.message = "";
         }
     }
